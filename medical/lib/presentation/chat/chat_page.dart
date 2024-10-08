@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medical/infrastructure/provider/chat_provider.dart';
 import 'package:medical/presentation/core/style.dart';
 import 'package:medical/presentation/widgets/chat_widget.dart';
+import 'package:medical/utils/constant.dart';
 
 
 class ChatPage extends ConsumerWidget {
@@ -25,7 +26,7 @@ class ChatPage extends ConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [Text(
-                "Chat",
+               ConstantUtils.chat,
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
               ),
               Icon(Icons.more_horiz)
@@ -35,7 +36,7 @@ class ChatPage extends ConsumerWidget {
               ),
               TextField(
                 decoration:
-                inputDecoration("Search here...", Icons.search_rounded),
+                inputDecoration(ConstantUtils.lableText, Icons.search_rounded),
               ),
               const SizedBox(
                 height: 20,

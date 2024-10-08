@@ -15,10 +15,10 @@ class UserWelcome extends ConsumerStatefulWidget {
 class _UserWelcomeState extends ConsumerState<UserWelcome> {
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Column(
+        Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -35,7 +35,7 @@ class _UserWelcomeState extends ConsumerState<UserWelcome> {
             ),
           ],
         ),
-        avatar(
+        CustomAvtar(
             borderRadius: 24,
             avatarSize: 24,
             borderWidth: 2,

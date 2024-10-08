@@ -10,7 +10,7 @@ class ConstantUtils {
     static const String appoinmentTime='10:30 AM';
     static const String   doctorSpecilisation= 'Dental Specialist';
     static const String topDoctor= 'Top Doctor\'s for you';
- 
+ static const String chat='Chat';
 
 
 }

@@ -25,7 +25,7 @@ class DoctorWidget extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                avatar(
+                CustomAvtar(
                     image: item.photo,
                     borderRadius: 35,
                     avatarSize: 35,

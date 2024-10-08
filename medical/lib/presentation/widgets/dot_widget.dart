@@ -53,7 +53,7 @@ Widget appointment() {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                avatar(
+                const CustomAvtar(
                     image: Assets.imagesImageDoctor,
                     borderRadius: 30,
                     avatarSize: 30,

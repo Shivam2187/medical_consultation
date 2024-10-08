@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medical/domain/chat/chat_model.dart';
+import 'package:medical/presentation/widgets/avatar_widget.dart';
 
-import 'avatar_widget.dart';
 import 'dot_widget.dart';
 
 class ChatWidget extends StatelessWidget {
@@ -28,7 +28,7 @@ class ChatWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Stack(children: [
-                  avatar(
+                  CustomAvtar(
                       image: item.photo,
                       borderRadius: 30,
                       avatarSize: 30,
