@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:medical/domain/category/category_model.dart';
 import 'package:medical/domain/chat/chat_model.dart';
 
 part 'chat_event.freezed.dart';
