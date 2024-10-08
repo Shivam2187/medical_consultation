@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medical/generated/assets.dart';
 import 'package:medical/presentation/widgets/avatar_widget.dart';
 
+import '../../utils/constant.dart';
+
 class UserWelcome extends ConsumerStatefulWidget {
   const UserWelcome({super.key});
 
@@ -21,11 +23,11 @@ class _UserWelcomeState extends ConsumerState<UserWelcome> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hello Luke,",
+              ConstantUtils.userName,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
             Text(
-              "How do you feel today?",
+              ConstantUtils.userWelcome,
               style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,

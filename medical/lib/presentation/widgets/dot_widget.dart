@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medical/generated/assets.dart';
 import 'package:medical/presentation/core/colors.dart';
 import 'package:medical/presentation/widgets/avatar_widget.dart';
+import 'package:medical/utils/constant.dart';
 
 Widget smallDot(double size, Color color, String text) {
   return Container(
@@ -62,7 +63,7 @@ Widget appointment() {
                     padding: const EdgeInsets.all(12.0),
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.lightBlue, // Specify the desired color
+                      color: Colors.lightBlue,
                     ),
                     child: Image.asset(
                       Assets.iconsIcChatDefault,
@@ -78,17 +79,17 @@ Widget appointment() {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Dr. Ino Yamanaka",
+                    ConstantUtils.doctorName,
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: Colors.white),
-                  ), //dr name
-                  Text("10:30 AM",
+                  ),
+                  Text(ConstantUtils.appoinmentTime,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: Colors.white)), // time),
+                          color: Colors.white)),
                 ]),
             const SizedBox(
               height: 8,
@@ -97,17 +98,17 @@ Widget appointment() {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Dental Specialist",
+                    ConstantUtils.doctorSpecilisation,
                     style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w500,
                         color: Colors.white60),
-                  ), //dr name
-                  Text("05.22.2023",
+                  ),
+                  Text(ConstantUtils.appoinmentDate,
                       style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
-                          color: Colors.white60)), // time),
+                          color: Colors.white60)),
                 ])
           ],
         ),

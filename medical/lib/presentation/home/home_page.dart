@@ -9,6 +9,8 @@ import 'package:medical/presentation/widgets/category_widget.dart';
 import 'package:medical/presentation/widgets/doctor_widget.dart';
 import 'package:medical/presentation/widgets/dot_widget.dart';
 
+import '../../utils/constant.dart';
+
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
@@ -31,8 +33,8 @@ class HomePage extends ConsumerWidget {
                 height: 20,
               ),
               TextField(
-                decoration:
-                    inputDecoration("Search here...", Icons.search_rounded),
+                decoration: inputDecoration(
+                    ConstantUtils.lableText, Icons.search_rounded),
               ),
               const SizedBox(
                 height: 20,
@@ -54,14 +56,14 @@ class HomePage extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text(
-                    "Appointment Today",
+                    ConstantUtils.appointmentToday,
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
                         color: Colors.black),
                   ),
                   Text(
-                    "See all",
+                    ConstantUtils.seeAll,
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
@@ -81,14 +83,14 @@ class HomePage extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text(
-                    "Top Doctor's for you",
+                    ConstantUtils.topDoctor,
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
                         color: Colors.black),
                   ),
                   Text(
-                    "See all",
+                    ConstantUtils.seeAll,
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
