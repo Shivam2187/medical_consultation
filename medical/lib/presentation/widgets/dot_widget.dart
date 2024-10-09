@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical/generated/assets.dart';
+import 'package:medical/utils/assets_path.dart';
 import 'package:medical/presentation/core/colors.dart';
 import 'package:medical/presentation/widgets/avatar_widget.dart';
 import 'package:medical/utils/constant.dart';

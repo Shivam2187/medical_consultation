@@ -1,29 +1,29 @@
 import 'package:medical/domain/category/category_model.dart';
 import 'package:medical/domain/chat/chat_model.dart';
 import 'package:medical/domain/doctor/doctor_model.dart';
-import 'package:medical/generated/assets.dart';
+import 'package:medical/utils/assets_path.dart';
 
 class ApiService {
-  Future<List> getCategories() async {
+  List<CategoryModel> getCategories() {
     List<CategoryModel> categories = [];
-    categories.add(const CategoryModel(
+    categories.add(CategoryModel(
         id: "1200001", title: "Hospital", icon: Assets.imagesImageHospital));
-    categories.add(const CategoryModel(
+    categories.add(CategoryModel(
         id: "1200002",
         title: "Consultant",
         icon: Assets.imagesImageConsultant));
-    categories.add(const CategoryModel(
+    categories.add(CategoryModel(
         id: "1200003", title: "Recipe", icon: Assets.imagesImageReceipe));
-    categories.add(const CategoryModel(
+    categories.add(CategoryModel(
         id: "1200004",
         title: "Appointment",
         icon: Assets.imagesImageAppointment));
     return categories;
   }
 
-  Future<List> getDoctors() async {
+  List<DoctorModel> getDoctors() {
     List<DoctorModel> doctors = [];
-    doctors.add(const DoctorModel(
+    doctors.add(DoctorModel(
       id: "1100006",
       name: "Dr.Girish Sunder",
       photo: Assets.imagesDoctor5,
@@ -36,7 +36,7 @@ class ApiService {
       patient: 1016,
     ));
 
-    doctors.add(const DoctorModel(
+    doctors.add(DoctorModel(
       id: "1100004",
       name: "Dr.Abdoul Flower",
       photo: Assets.imagesDoctor6,
@@ -49,7 +49,7 @@ class ApiService {
       patient: 1056,
     ));
 
-    doctors.add(const DoctorModel(
+    doctors.add(DoctorModel(
       id: "1100002",
       name: "Dr.Lawrie Rosabel",
       photo: Assets.imagesDoctor3,
@@ -61,7 +61,7 @@ class ApiService {
       rating: 4.7,
       patient: 1556,
     ));
-    doctors.add(const DoctorModel(
+    doctors.add(DoctorModel(
       id: "1100003",
       name: "Dr.Rachna Beryl",
       photo: Assets.imagesDoctor2,
@@ -74,7 +74,7 @@ class ApiService {
       patient: 1016,
     ));
 
-    doctors.add(const DoctorModel(
+    doctors.add(DoctorModel(
       id: "1100001",
       name: "Dr.Kabuto Ykushi",
       photo: Assets.imagesImageDoctor,
@@ -86,7 +86,7 @@ class ApiService {
       rating: 4.8,
       patient: 1056,
     ));
-    doctors.add(const DoctorModel(
+    doctors.add(DoctorModel(
       id: "1100005",
       name: "Dr.Hortense Ollie",
       photo: Assets.imagesDoctor2,
@@ -101,7 +101,7 @@ class ApiService {
     return doctors;
   }
 
-  Future<List> getChat() async {
+    List<ChatModel> getChat() {
     List<ChatModel> chats = [];
     chats.add(ChatModel(
         name: "Dr.Hortense Ollie",

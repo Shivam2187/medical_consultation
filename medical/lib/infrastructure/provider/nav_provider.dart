@@ -1,5 +1,9 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medical/application/nav/nav_notifier.dart';
-import 'package:medical/application/nav/nav_state.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-var navNotifierProvider = StateNotifierProvider<NavNotifier,NavState>((ref) => NavNotifier());
+ 
+class UpdateIndexBloc extends Cubit<int> {
+  UpdateIndexBloc() : super(0) ;
+  
+  // Method to update the selected index
+  void updateIndex(int newIndex) => emit(newIndex);
+}

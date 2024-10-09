@@ -1,11 +1,14 @@
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medical/application/nav/nav_state.dart';
+import 'package:flutter/material.dart';
 
-class NavNotifier extends StateNotifier<NavState>{
-  NavNotifier():super(NavState.empty());
+class NavNotifier with ChangeNotifier{
+ int _selectedIndex = 0;
 
-  void onTabChanged(int index){
-    state = state.copyWith(index: index);
+  int get selectedIndex => _selectedIndex;
+
+  // Method to update the selected index
+  void updateIndex(int newIndex) {
+    _selectedIndex = newIndex;
+    notifyListeners(); // Notifies listeners that the data has changed
   }
 }

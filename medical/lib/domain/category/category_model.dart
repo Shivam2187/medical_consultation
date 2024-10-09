@@ -1,19 +1,34 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-part 'category_model.freezed.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
 
-@freezed
-class CategoryModel with _$CategoryModel {
-  const factory CategoryModel({
-    required String id,
-    required String title,
-    required String icon,
-  }) = _CategoryModel;
+class CategoryModel {
+  final String id;
+  final String title;
+  final String icon;
 
-  const CategoryModel._();
+  CategoryModel({
+    required this.id,
+    required this.title,
+    required this.icon,
+  });
 
-  factory CategoryModel.empty() => const CategoryModel(
-    id: "",
-    title: "",
-    icon: "",
-  );
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'id': id,
+      'title': title,
+      'icon': icon,
+    };
+  }
+
+  factory CategoryModel.fromMap(Map<String, dynamic> map) {
+    return CategoryModel(
+      id: map['id'] as String,
+      title: map['title'] as String,
+      icon: map['icon'] as String,
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory CategoryModel.fromJson(String source) => CategoryModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

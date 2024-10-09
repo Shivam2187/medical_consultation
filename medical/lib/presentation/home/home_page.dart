@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medical/infrastructure/provider/category_provider.dart';
-import 'package:medical/infrastructure/provider/doctor_provider.dart';
 import 'package:medical/presentation/core/colors.dart';
 import 'package:medical/presentation/core/style.dart';
 import 'package:medical/presentation/home/user_welcome.dart';
@@ -9,15 +6,18 @@ import 'package:medical/presentation/widgets/category_widget.dart';
 import 'package:medical/presentation/widgets/doctor_widget.dart';
 import 'package:medical/presentation/widgets/dot_widget.dart';
 
+import '../../infrastructure/service/api_service.dart';
 import '../../utils/constant.dart';
 
-class HomePage extends ConsumerWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    var categoryList = ref.watch(categoryDataProvider).value ?? [];
-    var doctorList = ref.watch(doctorDataProvider).value ?? [];
+  Widget build(
+    BuildContext context,
+  ) {
+    var categoryList = ApiService().getCategories();
+    var doctorList = ApiService().getDoctors();
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
