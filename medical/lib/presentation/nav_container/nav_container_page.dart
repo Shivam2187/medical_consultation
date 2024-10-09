@@ -5,7 +5,7 @@ import 'package:medical/presentation/chat/chat_page.dart';
 import 'package:medical/presentation/core/colors.dart';
 import 'package:medical/presentation/home/home_page.dart';
 
-import '../../infrastructure/provider/nav_provider.dart';
+import '../../infrastructure/bloc/update_index.dart';
 
 class NavContainer extends StatelessWidget {
   const NavContainer({super.key});

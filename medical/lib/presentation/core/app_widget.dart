@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medical/presentation/core/colors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../infrastructure/provider/nav_provider.dart';
+import '../../infrastructure/bloc/update_index.dart';
 import '../nav_container/nav_container_page.dart';
 
 class AppWidget extends StatelessWidget {
